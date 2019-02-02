@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}Index{% endblock %}
+
+{% block content %}
+
+<h1 class="display-4">Index</h1>
+
+<p class="important">
+  Welcome to my awesome homepage.
+</p>
+
+<button onclick="uploadText('My name is Guillem')" type="button" class="btn btn-elegant">Upload Random Text</button>
+
+<div id="text-res"></div>
+{% endblock %}
+
+{% block scripts %}
+{{ super() }}
+<script type="text/javascript" src="{{ url_for('static', filename='js/main.js') }}"></script>
+{% endblock %}
